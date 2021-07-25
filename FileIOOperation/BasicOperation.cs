@@ -32,5 +32,12 @@ namespace FileIOOperation
                 Console.WriteLine(lines[i]);
             }
         }
+        //reading all the line as single string
+        public static void ReadFile(string filePath)
+        {
+            string text;
+            text = File.ReadAllText(filePath);
+            Console.WriteLine("{0}",text);
+        }
     }
 }

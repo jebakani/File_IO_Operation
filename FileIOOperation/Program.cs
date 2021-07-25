@@ -10,6 +10,7 @@ namespace FileIOOperation
             string filepath = @"C:\Users\HP1\Desktop\TestFiles.txt";
             BasicOperation.FileExists(filepath);
             BasicOperation.ReadAllLine(filepath);
+            BasicOperation.ReadFile(filepath);
             Console.Read();
         }
         
