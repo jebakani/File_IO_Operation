@@ -8,7 +8,8 @@ namespace FileIOOperation
         {
             Console.WriteLine("Welcome to File IO Operation");
             SearializationAndDeserialization operation = new SearializationAndDeserialization();
-            operation.BinarySerialization();
+            //operation.BinarySerialization();
+            operation.BinaryDeSerialization();
             Console.Read();
         }
         
