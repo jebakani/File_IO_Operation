@@ -21,5 +21,16 @@ namespace FileIOOperation
                 Console.WriteLine("File does not exists");
             }
         }
+        //reading the file line by line
+        public static void ReadAllLine(string filepath)
+        {
+            //storing the each line in array
+            string[] lines;
+            lines = File.ReadAllLines(filepath);
+            for(int i=0;i<lines.Length;i++)
+            {
+                Console.WriteLine(lines[i]);
+            }
+        }
     }
 }

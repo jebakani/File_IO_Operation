@@ -9,7 +9,9 @@ namespace FileIOOperation
             Console.WriteLine("Welcome to File IO Operation");
             string filepath = @"C:\Users\HP1\Desktop\TestFiles.txt";
             BasicOperation.FileExists(filepath);
+            BasicOperation.ReadAllLine(filepath);
             Console.Read();
         }
+        
     }
 }
