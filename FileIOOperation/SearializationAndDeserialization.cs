@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace FileIOOperation
 {
@@ -75,6 +76,20 @@ namespace FileIOOperation
             {
                 Console.WriteLine(e.Message);
             }
+        }
+        //converting the object into the xml format
+        public void XMLSerialization()
+        {
+            string path = @"C:\Users\HP1\source\repos\Lambda\New folder\FileIOOperation\XMLFile2.xml";
+            //creating the object for the personData
+            PersonData data = new PersonData();
+            data.name = "Jeba";
+            data.age = 21;
+            //creating the stream for the file to write
+            FileStream file = File.OpenWrite(path);
+            //it convert the object into xml format
+            XmlSerializer serializer = new XmlSerializer(typeof(PersonData));
+            serializer.Serialize(file, data);
         }
     }
 }
