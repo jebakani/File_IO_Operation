@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -36,6 +37,21 @@ namespace FileIOOperation
             PersonData person = (PersonData)binary.Deserialize(file);
             Console.WriteLine("Person detail");
             Console.WriteLine("Name:{0}  Age{1}",person.name,person.age);
+        }
+        //converting the object into the json file
+        public void JSONSerialization()
+        {
+            try
+            {
+                string path = @"C:\Users\HP1\source\repos\Lambda\New folder\FileIOOperation\PersonData.json";
+                PersonData person = new PersonData() { name="Jeba", age= 10};
+                string res = JsonConvert.SerializeObject(person);
+                File.WriteAllText(path, res);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

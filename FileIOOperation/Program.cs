@@ -10,6 +10,7 @@ namespace FileIOOperation
             SearializationAndDeserialization operation = new SearializationAndDeserialization();
             //operation.BinarySerialization();
             operation.BinaryDeSerialization();
+            operation.JSONSerialization();
             Console.Read();
         }
         
