@@ -11,6 +11,7 @@ namespace FileIOOperation
             //operation.BinarySerialization();
             operation.BinaryDeSerialization();
             operation.JSONSerialization();
+            operation.JSONDeSerialization();
             Console.Read();
         }
         

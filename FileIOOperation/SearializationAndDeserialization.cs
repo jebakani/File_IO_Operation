@@ -44,11 +44,34 @@ namespace FileIOOperation
             try
             {
                 string path = @"C:\Users\HP1\source\repos\Lambda\New folder\FileIOOperation\PersonData.json";
-                PersonData person = new PersonData() { name="Jeba", age= 10};
+                PersonData person = new PersonData() { name="abc", age= 20};
                 string res = JsonConvert.SerializeObject(person);
                 File.WriteAllText(path, res);
             }
             catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        //converting the json file into object
+        public void JSONDeSerialization()
+        {
+            try
+            {
+                string path = @"C:\Users\HP1\source\repos\Lambda\New folder\FileIOOperation\PersonData.json";
+                string res = File.ReadAllText(path);
+                //deserialize the object and store it in the object
+                PersonData person=JsonConvert.DeserializeObject<PersonData>(res);
+                if(person!=null)
+                {
+                    Console.WriteLine("Name:{0}  Age:{1}",person.name,person.age);
+                }
+                else
+                {
+                    Console.WriteLine("File is empty");
+                }
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
