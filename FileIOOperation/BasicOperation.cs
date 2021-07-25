@@ -61,6 +61,17 @@ namespace FileIOOperation
             {
                 Console.WriteLine(text);
             }
+            reader.Close();
+        }
+        //Writing into the file using stream reader
+        public static void WriteUsingStreamWriter(string filePath)
+        {
+            Console.WriteLine("Writing text into file");
+            using (StreamWriter writer = File.AppendText(filePath))
+            {
+                writer.WriteLine("Writing into the file");
+                writer.Close();
+            }
         }
     }
 }
