@@ -39,5 +39,11 @@ namespace FileIOOperation
             text = File.ReadAllText(filePath);
             Console.WriteLine("{0}",text);
         }
+        //make the copy of the text file
+        public static void CopyFile(string InputFile,string OutputFile)
+        {
+            File.Copy(InputFile, OutputFile);
+            Console.WriteLine("File is copied");
+        }
     }
 }
