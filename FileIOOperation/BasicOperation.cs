@@ -45,5 +45,22 @@ namespace FileIOOperation
             File.Copy(InputFile, OutputFile);
             Console.WriteLine("File is copied");
         }
+        //Deleting the particular file 
+        public static void DeleteFile(string filePath)
+        {
+            File.Delete(filePath);
+            Console.WriteLine("File is deleted");
+        }
+        //Reading the file using stream reader
+        public static void ReadFromStreamReader(string filePath)
+        {
+            Console.WriteLine("Reading text using file reader");
+            StreamReader reader = File.OpenText(filePath);
+            string text = "";
+            while((text=reader.ReadLine())!=null)
+            {
+                Console.WriteLine(text);
+            }
+        }
     }
 }

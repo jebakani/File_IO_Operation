@@ -12,7 +12,7 @@ namespace FileIOOperation
             BasicOperation.FileExists(filepath);
             BasicOperation.ReadAllLine(filepath);
             BasicOperation.ReadFile(filepath);
-            BasicOperation.CopyFile(filepath, outputFile);
+            BasicOperation.ReadFromStreamReader(filepath);
             Console.Read();
         }
         
