@@ -11,5 +11,10 @@ namespace FileIOOperation
     {
         public string name { get; set; }
         public int age { get; set; }
+        public PersonData(string name,int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
     }
 }

@@ -17,11 +17,7 @@ namespace FileIOOperation
         {
             string path = @"C:\Users\HP1\source\repos\Lambda\New folder\FileIOOperation\Binary.txt";
             //creating the object for the personData
-            PersonData data = new PersonData();
-            data.name = "Jeba";
-            data.age = 21;
-            data.name = "acx";
-            data.age = 31;
+            PersonData data = new PersonData("acx",31);
             //creating the stream for the file to write
             FileStream file = File.OpenWrite(path);
             //it convert the object into binary format
@@ -45,7 +41,7 @@ namespace FileIOOperation
             try
             {
                 string path = @"C:\Users\HP1\source\repos\Lambda\New folder\FileIOOperation\PersonData.json";
-                PersonData person = new PersonData() { name="abc", age= 20};
+                PersonData person = new PersonData("abc",20); 
                 string res = JsonConvert.SerializeObject(person);
                 File.WriteAllText(path, res);
             }
@@ -82,9 +78,7 @@ namespace FileIOOperation
         {
             string path = @"C:\Users\HP1\source\repos\Lambda\New folder\FileIOOperation\XMLFile2.xml";
             //creating the object for the personData
-            PersonData data = new PersonData();
-            data.name = "Jeba";
-            data.age = 21;
+            PersonData data = new PersonData("jeba",21);
             //creating the stream for the file to write
             FileStream file = File.OpenWrite(path);
             //it convert the object into xml format
